@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منصة الاجتماعات — البداية</title>
+    <style>
+      body{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;padding:24px;max-width:780px;margin:auto;}
+      input,button{font-size:16px;padding:10px 14px}
+      input{width:260px} button{margin-inline-start:8px}
+      .muted{opacity:.7}
+      .card{border:1px solid #ddd;border-radius:12px;padding:16px}
+    </style>
+  </head>
+  <body>
+    <h1>منصة الاجتماعات — تجربة سريعة</h1>
+    <div class="card">
+      <p class="muted">اختَر Room ID أو استخدم الافتراضي ثم ادخل الغرفة. افتح نفس الرابط من نافذة/جهاز آخر للمكالمة.</p>
+      <p>
+        <label>Room ID: <input id="roomId" /></label>
+        <button id="goBtn">دخول</button>
+      </p>
+    </div>
+
+    <script src="client_main.js"></script>
+  </body>
+</html>

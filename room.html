@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>غرفة الاجتماع</title>
+    <style>
+      body{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;padding:16px;max-width:1100px;margin:auto;}
+      .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px}
+      video{width:100%;background:#000;border-radius:8px}
+      .chat{margin-top:12px;border-top:1px solid #ddd;padding-top:12px}
+      .row{display:flex;gap:8px}
+      input,button{font-size:16px;padding:8px 10px}
+      ul{list-style:none;padding:0} li{padding:4px 0}
+    </style>
+  </head>
+  <body>
+    <h2 id="title">غرفة</h2>
+    <div class="grid" id="videos">
+      <video id="local" autoplay playsinline muted></video>
+    </div>
+
+    <div class="chat">
+      <form id="chatForm" class="row">
+        <input id="msg" placeholder="اكتب رسالة عامة" />
+        <button>إرسال</button>
+      </form>
+      <ul id="msgs"></ul>
+    </div>
+
+    <!-- Socket.io CDN -->
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" crossorigin="anonymous"></script>
+    <script src="room.js"></script>
+  </body>
+</html>
